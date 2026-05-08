@@ -20,23 +20,23 @@
       const resetButton = document.querySelector("button:nth-child(5)");
 
       showQuantityButton.addEventListener("click", function () {
-        console.log(quantity);
+        console.log(`cart quantity:${quantity}`);
       });
       AddToCart.addEventListener("click", function () {
         quantity++;
-        console.log(quantity);
+        console.log(`cart quantity:${quantity}`);
       });
       Addtwo.addEventListener("click", function () {
         quantity += 2;
-        console.log(quantity);
+        console.log(`cart quantity:${quantity}`);
       });
       AddThree.addEventListener("click", function () {
         quantity += 3;
-        console.log(quantity);
+        console.log(`cart quantity:${quantity}`);
       });
       resetButton.addEventListener("click", function () {
         quantity = 0;
-        console.log(quantity);
+        console.log(`cart quantity:${quantity}`);
       });
     </script>
   </body>
