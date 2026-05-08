@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>cart quantity</title>
+  </head>
+  <body>
+    <button>Show Quantity</button>
+    <button>Add to Cart</button>
+    <button>+2</button>
+    <button>+3</button>
+    <button>reset Quantity</button>
+    <script>
+      let quantity = 0;
+      const showQuantityButton = document.querySelector("button:nth-child(1)");
+      const AddToCart = document.querySelector("button:nth-child(2)");
+      const Addtwo = document.querySelector("button:nth-child(3)");
+      const AddThree = document.querySelector("button:nth-child(4)");
+      const resetButton = document.querySelector("button:nth-child(5)");
+
+      showQuantityButton.addEventListener("click", function () {
+        console.log(quantity);
+      });
+      AddToCart.addEventListener("click", function () {
+        quantity++;
+        console.log(quantity);
+      });
+      Addtwo.addEventListener("click", function () {
+        quantity += 2;
+        console.log(quantity);
+      });
+      AddThree.addEventListener("click", function () {
+        quantity += 3;
+        console.log(quantity);
+      });
+      resetButton.addEventListener("click", function () {
+        quantity = 0;
+        console.log(quantity);
+      });
+    </script>
+  </body>
+</html>
