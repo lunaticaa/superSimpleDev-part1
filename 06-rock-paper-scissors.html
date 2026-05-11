@@ -1,12 +1,51 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Rock Paper Scissors</title>
-</head>
-<body>
-  <script></script>
-  
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Rock Paper Scissors</title>
+  </head>
+  <body>
+    <p>Rock Paper Scissors</p>
+    <button onclick="pickUp('Rock')">Rock</button>
+    <button onclick="pickUp('Paper')">Paper</button>
+    <button onclick="pickUp('Scissors')">Scissors</button>
+    <script>
+      // random number between 0 and 1
+      let randNum = parseFloat(Math.random().toFixed(2));
+      // movements
+      let computerMove = "";
+      let result = "";
+      // computer movement
+      function computerPick() {
+        console.log(randNum);
+        if (randNum >= 0 && randNum < 0.33) {
+          computerMove = "Rock";
+        } else if (randNum >= 0.34 && randNum < 0.66) {
+          computerMove = "Paper";
+        } else {
+          computerMove = "Scissors";
+        }
+      }
+      // user pick
+      function pickUp(pick) {
+        computerPick();
+
+        if (computerMove === pick) {
+          result = "Tie";
+        } else if (
+          (computerMove === "Paper" && pick === "Rock") ||
+          (computerMove === "Rock" && pick === "Scissors") ||
+          (computerMove === "Scissors" && pick === "Paper")
+        ) {
+          result = "you lose!";
+        } else {
+          result = "you win!";
+        }
+        alert(
+          ` you picked ${pick} Computer picked: ${computerMove}. ${result}`,
+        );
+      }
+    </script>
+  </body>
 </html>
