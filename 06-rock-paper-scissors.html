@@ -7,18 +7,16 @@
   </head>
   <body>
     <p>Rock Paper Scissors</p>
-    <button onclick="pickUp('Rock')">Rock</button>
-    <button onclick="pickUp('Paper')">Paper</button>
-    <button onclick="pickUp('Scissors')">Scissors</button>
+    <button onclick="const computerMove = computerPick()">Rock</button>
+    <button onclick="const computerMove = computerPick()">Paper</button>
+    <button onclick="const computerMove = computerPick()">Scissors</button>
     <script>
-      // random number between 0 and 1
-      let randNum = parseFloat(Math.random().toFixed(2));
-      // movements
-      let computerMove = "";
       let result = "";
-      // computer movement
+
       function computerPick() {
-        console.log(randNum);
+        // random number between 0 and 1
+        const randNum = parseFloat(Math.random().toFixed(2));
+        let computerMove = "";
         if (randNum >= 0 && randNum < 0.33) {
           computerMove = "Rock";
         } else if (randNum >= 0.34 && randNum < 0.66) {
@@ -26,6 +24,8 @@
         } else {
           computerMove = "Scissors";
         }
+
+        return computerMove;
       }
       // user pick
       function pickUp(pick) {
