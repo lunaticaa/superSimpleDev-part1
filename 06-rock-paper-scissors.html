@@ -7,41 +7,55 @@
   </head>
   <body>
     <p>Rock Paper Scissors</p>
-    <button onclick="const computerMove = computerPick()">Rock</button>
-    <button onclick="const computerMove = computerPick()">Paper</button>
-    <button onclick="const computerMove = computerPick()">Scissors</button>
+    <button onclick="pickUp('rock')">Rock</button>
+    <button onclick="pickUp('paper')">Paper</button>
+    <button onclick="pickUp('scissors')">Scissors</button>
     <script>
-      let result = "";
-
       function computerPick() {
         // random number between 0 and 1
         const randNum = parseFloat(Math.random().toFixed(2));
         let computerMove = "";
         if (randNum >= 0 && randNum < 0.33) {
-          computerMove = "Rock";
+          computerMove = "rock";
         } else if (randNum >= 0.34 && randNum < 0.66) {
-          computerMove = "Paper";
+          computerMove = "paper";
         } else {
-          computerMove = "Scissors";
+          computerMove = "scissors";
         }
 
         return computerMove;
       }
       // user pick
       function pickUp(pick) {
-        computerPick();
+        let result = "";
+        const computerMove = computerPick();
 
-        if (computerMove === pick) {
-          result = "Tie";
-        } else if (
-          (computerMove === "Paper" && pick === "Rock") ||
-          (computerMove === "Rock" && pick === "Scissors") ||
-          (computerMove === "Scissors" && pick === "Paper")
-        ) {
-          result = "you lose!";
-        } else {
-          result = "you win!";
+        if (pick == 'scissors'){
+          if (computerMove == 'rock') {
+            result = "You lose!";
+          } else if (computerMove == 'paper') {
+            result = "You win!";
+          } else if (computerMove == 'scissors') {
+            result = "It's a tie!";
+          }
+        } else if(pick == 'paper') {
+          if (computerMove == 'rock') {
+            result = "You win!";
+          } else if (computerMove == 'paper') {
+            result = "It's a tie!";
+          } else if (computerMove == 'scissors') {
+            result = "You lose!";
+          }
+        } else if(pick == 'rock') {
+          if (computerMove == 'rock') {
+            result = "It's a tie!";
+          } else if (computerMove == 'paper') {
+            result = "You lose!";
+          } else if (computerMove == 'scissors') {
+            result = "You win!";
+          }
         }
+        
         alert(
           ` you picked ${pick} Computer picked: ${computerMove}. ${result}`,
         );
