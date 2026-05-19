@@ -30,35 +30,35 @@
         let result = "";
         const computerMove = computerPick();
 
-        if (pick == 'scissors'){
-          if (computerMove == 'rock') {
+        if (pick == "scissors") {
+          if (computerMove == "rock") {
             result = "You lose!";
-          } else if (computerMove == 'paper') {
+          } else if (computerMove == "paper") {
             result = "You win!";
-          } else if (computerMove == 'scissors') {
+          } else if (computerMove == "scissors") {
             result = "It's a tie!";
           }
-          
-        } else if(pick == 'paper') {
-          if (computerMove == 'rock') {
+        } else if (pick == "paper") {
+          if (computerMove == "rock") {
             result = "You win!";
-          } else if (computerMove == 'paper') {
+          } else if (computerMove == "paper") {
             result = "It's a tie!";
-          } else if (computerMove == 'scissors') {
+          } else if (computerMove == "scissors") {
             result = "You lose!";
           }
-
-        } else if(pick == 'rock') {
-          if (computerMove == 'rock') {
+        } else if (pick == "rock") {
+          if (computerMove == "rock") {
             result = "It's a tie!";
-          } else if (computerMove == 'paper') {
+          } else if (computerMove == "paper") {
             result = "You lose!";
-          } else if (computerMove == 'scissors') {
+          } else if (computerMove == "scissors") {
             result = "You win!";
           }
         }
-        
+        s;
+
         alert(
+          "message",
           ` you picked ${pick} Computer picked: ${computerMove}. ${result}`,
         );
       }
