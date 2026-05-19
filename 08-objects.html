@@ -31,11 +31,17 @@
           reviews: 100,
           count: 76,
         },
+        fun: function func1() {
+          console.log("function is inside the objects");
+        },
       };
       console.log(product2);
       console.log(product2["name"]);
       console.log(product2["delivery-time"]);
       console.log(product2["delivery" + "-time"]);
+
+      console.log(product2.rating.count);
+      product2.fun();
     </script>
   </body>
 </html>
