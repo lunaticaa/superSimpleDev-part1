@@ -20,13 +20,8 @@
       Reset Score
     </button>
     <script>
-      const score = {
-        wins: 0,
-        losses: 0,
-        ties: 0,
-      };
+      const score = JSON.parse(localStorage.getItem("score"));
 
-      console.log(localStorage.getItem("message"));
       function computerPick() {
         // random number between 0 and 1
         const randNum = parseFloat(Math.random().toFixed(2));
@@ -79,7 +74,7 @@
         } else if (result === "It's a tie!") {
           score.ties += 1;
         }
-        localStorage.setItem('message', 'Hello, World!');
+        localStorage.setItem("score", JSON.stringify(score));
         alert(
           ` you picked ${pick} Computer picked: ${computerMove}. ${result} wins: ${score.wins}, losses: ${score.losses}, ties: ${score.ties}.`,
         );
