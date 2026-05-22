@@ -69,11 +69,27 @@
 
       const object4 = {
         message: "good job!",
+        price: 799,
       };
 
       // const message = object4.message;
       // shortcut
-      const { message } = object4;
+      const { message, price } = object4;
+      console.log(message);
+      console.log(price);
+
+      const object5 = {
+        // shortcut of message: message,
+        message,
+        // shortcut of method: function func1() {
+        //   console.log("method");
+        // },
+        method() {
+          console.log("method");
+        },
+      };
+      console.log(object5);
+      object5.method();
     </script>
   </body>
 </html>
