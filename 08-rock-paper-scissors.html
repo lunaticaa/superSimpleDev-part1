@@ -20,15 +20,21 @@
       Reset Score
     </button>
     <script>
-      const score = JSON.parse(localStorage.getItem("score"));
+      const score = JSON.parse(localStorage.getItem("score")) || {
+        wins: 0,
+        losses: 0,
+        ties: 0,
+      };
 
-      if (score === null) {
+      /*
+      if (!score) {
         score = {
           wins: 0,
           losses: 0,
           ties: 0,
         };
       }
+        */
 
       function computerPick() {
         // random number between 0 and 1
