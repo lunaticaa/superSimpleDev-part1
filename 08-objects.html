@@ -8,46 +8,46 @@
   <body>
     <script>
       /*const product = {
-        name: "socks",
-        price: 1090,
-      };
+              name: "socks",
+              price: 1090,
+            };
 
-      console.log(product.name);
-      console.log(product.price);
-      product.name = "cotton socks";
+            console.log(product.name);
+            console.log(product.price);
+            product.name = "cotton socks";
 
-      product.newProperty = true;
-      console.log(product.newProperty);
+            product.newProperty = true;
+            console.log(product.newProperty);
 
-      delete product.newProperty;
-      console.log(product);
-      */
+            delete product.newProperty;
+            console.log(product);
+            */
 
       /*const product2 = {
-        name: "shirt",
-        ["delivery-time"]: "5-7 days",
-        rating: {
-          stars: 4.5,
-          reviews: 100,
-          count: 76,
-        },
-        fun: function func1() {
-          console.log("function is inside the objects");
-        },
-      };
-      console.log(product2);
-      console.log(product2["name"]);
-      console.log(product2["delivery-time"]);
-      console.log(product2["delivery" + "-time"]);
+              name: "shirt",
+              ["delivery-time"]: "5-7 days",
+              rating: {
+                stars: 4.5,
+                reviews: 100,
+                count: 76,
+              },
+              fun: function func1() {
+                console.log("function is inside the objects");
+              },
+            };
+            console.log(product2);
+            console.log(product2["name"]);
+            console.log(product2["delivery-time"]);
+            console.log(product2["delivery" + "-time"]);
 
-      console.log(product2.rating.count);
-      product2.fun();
-      // console is a object and log is a method of console object and is a functio n
-      console.log(typeof console.log);
-      console.log(JSON.stringify(product2));
+            console.log(product2.rating.count);
+            product2.fun();
+            // console is a object and log is a method of console object and is a functio n
+            console.log(typeof console.log);
+            console.log(JSON.stringify(product2));
 
-      const jsonString = JSON.stringify(product2);
-      console.log(JSON.parse(jsonString));*/
+            const jsonString = JSON.stringify(product2);
+            console.log(JSON.parse(jsonString));*/
       console.log("hello".length);
       console.log("hello".toUpperCase());
 
@@ -56,6 +56,20 @@
       };
 
       const object2 = object1;
+      object1.message = "good job!";
+      console.log(object1);
+      console.log(object2);
+
+      const object3 = {
+        message: "good job!",
+      };
+
+      console.log(object3 === object1);
+      console.log(object2 === object1);
+
+      const object4 = {
+        message: "good job!",
+      };
     </script>
   </body>
 </html>
