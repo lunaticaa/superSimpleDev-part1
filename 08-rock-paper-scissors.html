@@ -22,6 +22,14 @@
     <script>
       const score = JSON.parse(localStorage.getItem("score"));
 
+      if (score === null) {
+        score = {
+          wins: 0,
+          losses: 0,
+          ties: 0,
+        };
+      }
+
       function computerPick() {
         // random number between 0 and 1
         const randNum = parseFloat(Math.random().toFixed(2));
