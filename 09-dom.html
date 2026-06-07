@@ -1,12 +1,26 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>DOMs</title>
-</head>
-<body>
-  <script></script>
-  
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DOMs</title>
+  </head>
+  <body>
+    <button>Hello</button>
+    <script>
+      /*
+      document.body.innerHTML = "hello";
+      document.title = "Good job man";
+      */
+
+      /*
+      console.log(document.title);
+      console.log(typeof document.body);
+
+      console.log(document.body.innerHTML);
+      document.body.innerHTML = "changed";
+      */
+      document.querySelector("button").innerHTML = "Changed";
+    </script>
+  </body>
 </html>
