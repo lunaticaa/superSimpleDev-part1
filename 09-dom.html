@@ -7,6 +7,7 @@
   </head>
   <body>
     <button>Hello</button>
+    <button class="2ndBtn">second button</button>
     <script>
       /*
       document.body.innerHTML = "hello";
@@ -21,6 +22,8 @@
       document.body.innerHTML = "changed";
       */
       document.querySelector("button").innerHTML = "Changed";
+      const buttonElemnet = document.querySelector(".2ndBtn");
+      buttonElemnet.innerHTML = "Changed 2nd button";
     </script>
   </body>
 </html>
