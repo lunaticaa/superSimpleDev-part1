@@ -11,9 +11,10 @@
     <button onclick="pickUp('paper')">Paper</button>
     <button onclick="pickUp('scissors')">Scissors</button>
     <!-- show results -->
+    <p class="js-result"></p>
+    <p class="js-moves"></p>
     <p class="js-score"></p>
-    <p></p>
-
+    <!-- end of show results -->
     <button
       onclick="score.wins = 0;
     score.losses = 0;
@@ -100,10 +101,9 @@
         localStorage.setItem("score", JSON.stringify(score));
 
         updateScoreElement();
-
-        alert(
-          ` you picked ${pick} Computer picked: ${computerMove}. ${result} wins: ${score.wins}, losses: ${score.losses}, ties: ${score.ties}.`,
-        );
+        document.querySelector(".js-result").innerHTML = result;
+        document.querySelector(".js-moves").innerHTML =
+          `You: ${pick} - Computer: ${computerMove}`;
       }
     </script>
   </body>
