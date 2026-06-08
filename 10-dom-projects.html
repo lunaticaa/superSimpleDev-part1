@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DOMs projects</title>
+    <style>
+      .sub-button {
+        border: none;
+        background-color: black;
+        color: white;
+        padding: 10px 15px;
+        border-radius: 50px;
+        font-weight: bold;
+        cursor: pointer;
+      }
+      .is-subscribed {
+        background-color: rgb(240, 240, 240);
+        color: black;
+      }
+      body {
+        font-family: Arial, Helvetica, sans-serif;
+      }
+    </style>
+  </head>
+  <body>
+    <p>Youtube subscribe button</p>
+    <button onclick="subscribe() " class="sub sub-button">Subscribe</button>
+    <p>Amazon shipping Calculator</p>
+    <input
+      type="text"
+      class="js-cost-input"
+      placeholder="Cost of order"
+      onkeydown="handleCost(event)"
+    />
+    <button onclick="Calculator()">Calculate</button>
+    <p class="js-total-cost"></p>
+
+    <script>
+      // window.document
+      function handleCost(event) {
+        if (event.key === "Enter") {
+          Calculator();
+        }
+      }
+      // calc button
+      function Calculator() {
+        const inputElement = document.querySelector(".js-cost-input");
+        let cost = Number(inputElement.value);
+        //
+        if (cost < 40) {
+          cost += 10;
+        }
+
+        document.querySelector(".js-total-cost").innerHTML =
+          `Total cost: $${cost}`;
+      }
+      // sub button
+      function subscribe() {
+        const btn1Element = document.querySelector(".sub");
+        if (btn1Element.innerText === "Subscribe") {
+          btn1Element.innerHTML = "Subscribed";
+          btn1Element.classList.add("is-subscribed");
+        } else {
+          btn1Element.innerHTML = "Subscribe";
+          btn1Element.classList.remove("is-subscribed");
+        }
+      }
+    </script>
+  </body>
+</html>
