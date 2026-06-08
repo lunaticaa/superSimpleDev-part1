@@ -5,9 +5,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>DOMs projects</title>
     <style>
-      .cost-input{
+      .cost-input {
         font-size: 15px;
         padding: 10px;
+      }
+      .calculate-button {
+        background-color: green;
+        color: white;
+        padding: 12px 15px;
+        border: none;
+        font-size: 15px;
+        cursor: pointer;
       }
       .sub-button {
         border: none;
@@ -38,7 +46,7 @@
       placeholder="Cost of order"
       onkeydown="handleCost(event)"
     />
-    <button onclick="Calculator()">Calculate</button>
+    <button onclick="Calculator()" class="calculate-button">Calculate</button>
     <p class="js-total-cost"></p>
 
     <script>
