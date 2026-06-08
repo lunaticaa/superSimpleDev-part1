@@ -5,6 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>DOMs projects</title>
     <style>
+      .cost-input{
+        font-size: 15px;
+        padding: 10px;
+      }
       .sub-button {
         border: none;
         background-color: black;
@@ -13,6 +17,7 @@
         border-radius: 50px;
         font-weight: bold;
         cursor: pointer;
+        margin-bottom: 30px;
       }
       .is-subscribed {
         background-color: rgb(240, 240, 240);
@@ -29,7 +34,7 @@
     <p>Amazon shipping Calculator</p>
     <input
       type="text"
-      class="js-cost-input"
+      class="js-cost-input cost-input"
       placeholder="Cost of order"
       onkeydown="handleCost(event)"
     />
